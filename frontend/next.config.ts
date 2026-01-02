@@ -1,8 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",      // enables static export
+  output: "export", // static export
   reactStrictMode: true,
+  images: {
+    unoptimized: true, // REQUIRED for Netlify static export
+  },
 };
 
 export default nextConfig;
